@@ -1,0 +1,117 @@
+[
+    {
+        "id": 1,
+        "name": "HTML",
+        "icon": "BsFiletypeHtml"
+    },
+    {
+        "id": 2,
+        "name": "CSS",
+        "icon": "BsFiletypeCss"
+    },
+    {
+        "id": 3,
+        "name": "JavaScript",
+        "icon": "BiLogoJavascript"
+    },
+    {
+        "id": 4,
+        "name": "TypeScript",
+        "icon": "BiLogoTypescript"
+    },
+    {
+        "id": 5,
+        "name": "Python",
+        "icon": "FaPython"
+    },
+    {
+        "id": 6,
+        "name": "MySQL",
+        "icon": "TbFileTypeSql"
+    },
+    {
+        "id": 7,
+        "name": "PHP",
+        "icon": "BiLogoPhp"
+    },
+    {
+        "id": 8,
+        "name": "jQuery",
+        "icon": "DiJqueryLogo"
+    },
+    {
+        "id": 9,
+        "name": "Java",
+        "icon": "FaJava"
+    },
+    {
+        "id": 10,
+        "name": "Bootstrap",
+        "icon": "SiBootstrap"
+    },
+    {
+        "id": 11,
+        "name": "Node.js",
+        "icon": "BiLogoNodejs"
+    },
+    {
+        "id": 12,
+        "name": "React",
+        "icon": "FaReact"
+    },
+    {
+        "id": 13,
+        "name": "MySQL",
+        "icon": "SiMysql"
+    },
+    {
+        "id": 14,
+        "name": "Git",
+        "icon": "BsGit"
+    },
+    {
+        "id": 15,
+        "name": "GitHub",
+        "icon": "AiFillGithub"
+    },
+    {
+        "id": 16,
+        "name": "MongoDB",
+        "icon": "DiMongodb"
+    },
+    {
+        "id": 17,
+        "name": "Redux",
+        "icon": "BiLogoRedux"
+    },
+    {
+        "id": 18,
+        "name": "Tailwind CSS",
+        "icon": "SiTailwindcss"
+    },
+    {
+        "id": 19,
+        "name": "Django",
+        "icon": "BiLogoDjango"
+    },
+    {
+        "id": 20,
+        "name": "Express.js",
+        "icon": "SiExpress"
+    },
+    {
+        "id": 21,
+        "name": "Laravel",
+        "icon": "FaLaravel"
+    },
+    {
+        "id": 22,
+        "name": "WordPress",
+        "icon": "FaWordpressSimple"
+    },
+    {
+        "id": 23,
+        "name": "Drupal",
+        "icon": "DiDrupal"
+    }
+]

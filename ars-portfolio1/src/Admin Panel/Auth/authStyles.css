@@ -1,0 +1,19 @@
+.btn__pink {
+    background-color: #EA738D !important;
+    color: #fff;
+    border: 1px solid #EA738D;
+}
+
+.btn__pink:hover {
+    background-color: #EA738D !important;
+    color: #fff;
+    border: 1px solid #f25476 !important;
+    box-shadow: 1px 1px 1px 1px #f25476;
+}
+
+.btn__pink:active {
+    background-color: #EA738D !important;
+    color: #fff;
+    border: 1px solid #e9385f !important;
+    /* box-shadow: 1px 1px #888888; */
+}

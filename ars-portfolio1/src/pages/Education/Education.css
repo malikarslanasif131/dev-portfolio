@@ -1,0 +1,26 @@
+.education__styles{
+    background-color: var(--secondary-color);
+    
+}
+.education__title {
+    /* color: var(--primary-color);
+     */
+      color: var(--primary-color);
+      /* background-color: var(--quaternary-color); */
+    font-weight: 400;
+    border-bottom: 1px solid var(--primary-color);
+}
+.education__card {
+    -webkit-box-shadow: 0 0 32px 32px #dddddd;
+    -moz-box-shadow: 0 0 32px 32px #dddddd;
+    box-shadow: 0 0 32px 32px #dddddd;
+    background-color: var(--secondary-color);
+    font-size: 20px;
+    border-radius: 5px;
+    word-spacing: 2x;
+    letter-spacing: 1px;
+}
+.change__icon__style:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+}

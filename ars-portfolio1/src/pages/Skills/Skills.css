@@ -1,0 +1,25 @@
+.card_style_stack{
+    background-color: var(--secondary-color);
+ 
+    color: #fff;
+}
+.card_style_stack:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.skill__styles{
+    background-color: var(--secondary-color)af;
+}
+
+.card_style_stack img{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.stack__title {
+    color: var(--primary-color);
+    font-weight: 400;
+    border-bottom: 1px solid var(--primary-color);
+}

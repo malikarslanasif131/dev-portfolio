@@ -1,0 +1,29 @@
+.image_round{
+    border-radius: 50%;
+}
+
+.bg__color__white{
+   background-color: #e6e5e5d0;
+}
+
+.color__yellow__stack{
+    color: var(--primary-color);
+}
+
+.sky_blue_color{
+background-color: #89ABE3;
+color: #fff;
+}
+.bubblegum_pink_color {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.p_100 {
+    padding: 100px;
+}
+.home__section{
+    /* border-bottom: ; */
+    -webkit-box-shadow: 20px 6px 32px 11px #dddddd;
+        -moz-box-shadow: 20px 6px 32px 11px #dddddd;
+        box-shadow: 20px 6px 32px 11px #dddddd;
+}

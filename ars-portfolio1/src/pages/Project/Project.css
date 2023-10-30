@@ -1,0 +1,80 @@
+.card__style {
+    background-color: var(--secondary-color)b7;
+    backdrop-filter: blur(10px);
+
+}
+
+.btn_color_pink{
+    background-color: var(--primary-color) !important;
+    color: #fff;
+    border: 1px solid var(--primary-color);
+}
+
+.btn_color_pink:hover {
+    background-color: var(--primary-color) !important;
+    color: #fff;
+    border: 1px solid #f25476 !important;
+    box-shadow: 1px 1px 1px 1px #f25476;
+}
+.btn_color_pink:active {
+    background-color: var(--primary-color) !important;
+    color: #fff;
+    border: 1px solid #e9385f !important;
+    /* box-shadow: 1px 1px #888888; */
+}
+
+.badge__style{
+        display: inline-block;
+        padding: 0.35em 0.65em;
+        font-size: .75em;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 0.25rem;
+        margin-right: 0.25rem !important;
+        margin-left: 0.25rem !important;
+        /* background-color: var(--primary-color) !important; */
+        border-radius: 50rem !important;
+}
+
+.top_badge__style{
+        display: inline-block;
+        padding: 0.35em 0.65em;
+        font-size: 1em;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 0.25rem;
+        margin-right: 0.25rem !important;
+        margin-left: 0.25rem !important;
+        /* background-color: var(--primary-color) !important; */
+        border-radius: 50rem !important;
+        position: relative;
+        top: 18px;
+        left: -20px;
+        z-index: 100;
+}
+.pink_badge{
+    background-color: var(--primary-color) !important;
+}.goldenrod_badge {
+    background-color: goldenrod !important;
+}.blue_badge {
+    background-color: blue !important;
+}.crimson_badge {
+    background-color:crimson !important;
+}.teal_badge {
+    background-color:teal !important;
+}.indigo_badge {
+    background-color:indigo!important;
+}
+
+.model__style{
+    background-color: var(--secondary-color)93;
+        backdrop-filter: blur(15px);
+}
