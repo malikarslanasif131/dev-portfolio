@@ -30,7 +30,7 @@ import { authMiddleware } from "./middleware/authMiddleware.js";
 
 //config connect
 dotenv.config();
-connectDB();
+// connectDB();
 // const app = express();
 
 app.use(cors());
@@ -70,6 +70,8 @@ app.use("*", (req, res) => {
 
 const port = process.env.PORT || 8080;
 // Start the server
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`.bgCyan.white);
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`.bgCyan.white);
+  });
 });
