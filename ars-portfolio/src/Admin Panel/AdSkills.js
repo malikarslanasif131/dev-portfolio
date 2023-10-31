@@ -13,7 +13,7 @@ const AdSkills = () => {
 
   useEffect(() => {
     // Fetch skills from the server
-    axios.get("http://localhost:8080/api/skills").then((response) => {
+    axios.get("/api/skills").then((response) => {
       setSkills(response.data.data);
     });
   }, []);
@@ -29,10 +29,7 @@ const AdSkills = () => {
       formData.append("name", name);
       formData.append("image", image); // Use FormData to send the image as a file
 
-      const response = await axios.post(
-        "http://localhost:8080/api/skills",
-        formData
-      );
+      const response = await axios.post("/api/skills", formData);
       if (response.data.success) {
         toast.success("Skill added successfully");
         // Clear the form and update the skills list
@@ -136,7 +133,7 @@ const AdSkills = () => {
                         <td>
                           {skill.image ? (
                             <img
-                              src={`http://localhost:8080/uploads/${skill.image}`}
+                              src={`/uploads/${skill.image}`}
                               alt="ImageFile"
                               width="100"
                             />

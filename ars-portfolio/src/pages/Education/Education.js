@@ -18,7 +18,7 @@ const Education = () => {
 
   useEffect(() => {
     // Fetch education data from the server
-    axios.get("http://localhost:8080/api/education").then((response) => {
+    axios.get("/api/education").then((response) => {
       setEducationData(response.data);
     });
   }, []);

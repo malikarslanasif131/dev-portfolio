@@ -57,10 +57,7 @@ const AdProject = () => {
         formData.append("video", video);
       }
 
-      const response = await axios.post(
-        "http://localhost:8080/api/projects",
-        formData
-      );
+      const response = await axios.post("/api/projects", formData);
 
       if (response.data.success) {
         toast.success("Project added successfully");
@@ -82,9 +79,7 @@ const AdProject = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(
-        `http://localhost:8080/api/projects/${id}`
-      );
+      const response = await axios.delete(`/api/projects/${id}`);
       if (response.data.success) {
         toast.success("Project deleted successfully");
         // Update the projects list after deletion
@@ -216,7 +211,7 @@ const AdProject = () => {
                       <td>
                         {project.image ? (
                           <img
-                            src={`http://localhost:8080/uploads/${project.image}`}
+                            src={`/uploads/${project.image}`}
                             alt="ImageFile"
                             width="100"
                           />
@@ -227,7 +222,7 @@ const AdProject = () => {
                       <td>
                         {project.video ? (
                           <video
-                            src={`http://localhost:8080/uploads/${project.video}`}
+                            src={`/uploads/${project.video}`}
                             alt="ImageFile"
                             width="100"
                           />

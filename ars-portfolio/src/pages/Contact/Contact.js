@@ -34,7 +34,7 @@ const Contact = () => {
       .send("service_i4plhg7", "template_u5z0i6f", Data, "FenPdmumdsxkfssD8")
       .then(
         async (result) => {
-          await axios.post("http://localhost:8080/api/contact", {
+          await axios.post("/api/contact", {
             name,
             email,
             message,

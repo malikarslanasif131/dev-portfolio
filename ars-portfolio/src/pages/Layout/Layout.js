@@ -18,7 +18,7 @@ const Layout = () => {
   useEffect(() => {
     // Fetch color values from your API
     axios
-      .get("http://localhost:8080/api/setting")
+      .get("/api/setting")
       .then((response) => {
         setColors(response.data.data[0]);
         // console.log(response.data.data[0]);

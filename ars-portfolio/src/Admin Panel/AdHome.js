@@ -55,10 +55,7 @@ const AdHome = () => {
         formData.append("resumefile", resumefile);
       }
 
-      const res = await axios.post(
-        "http://localhost:8080/api/info/home",
-        formData
-      );
+      const res = await axios.post("/api/info/home", formData);
       if (res.data.success === true) {
         toast.success("Data added Successfully");
         setUpdate(true);

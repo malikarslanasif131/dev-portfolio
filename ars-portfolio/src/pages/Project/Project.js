@@ -21,7 +21,7 @@ const Project = () => {
   };
   useEffect(() => {
     // Fetch projects from the server
-    axios.get("http://localhost:8080/api/projects").then((response) => {
+    axios.get("/api/projects").then((response) => {
       setProjects(response.data.data);
     });
   }, []);
@@ -142,11 +142,14 @@ const Project = () => {
                   <span className="top_badge__style indigo_badge p-2">
                     {project.stack}
                   </span>
-                  <div className="card card__style " style={{ width: "24rem" }}>
+                  <div
+                    className="card card__style "
+                    style={{ minWidth: "24rem", maxWidth: "24rem" }}
+                  >
                     <img
-                      src={`http://localhost:8080/uploads/${project.image}`}
+                      src={`/uploads/${project.image}`}
                       className="card-img-top"
-                      style={{ height: "220px" }}
+                      style={{ maxHeight: "220px", minHeight: "220px" }}
                       alt="..."
                     />
                     <div className="card-body">
@@ -168,7 +171,7 @@ const Project = () => {
                           type="button"
                           onClick={() =>
                             handleOpenModal(
-                              `http://localhost:8080/uploads/${project.video}`,
+                              `/uploads/${project.video}`,
                               project.name
                             )
                           }

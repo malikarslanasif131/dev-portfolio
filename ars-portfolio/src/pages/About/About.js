@@ -13,7 +13,7 @@ const About = () => {
 
   useEffect(() => {
     // Fetch all data for the table
-    axios.get("http://localhost:8080/api/about").then((response) => {
+    axios.get("/api/about").then((response) => {
       setData(response.data.data[0].content);
     });
   }, [contentFlag]);

@@ -8,7 +8,7 @@ const HomeDataTable = ({ update }) => {
 
   useEffect(() => {
     // Fetch data from your API here
-    axios.get("http://localhost:8080/api/info/home").then((response) => {
+    axios.get("/api/info/home").then((response) => {
       setData(response.data.data); // Assuming your API returns data as an array
     });
   }, [update]);
@@ -17,7 +17,7 @@ const HomeDataTable = ({ update }) => {
   const handleDelete = async (itemId) => {
     try {
       // Make a DELETE request to your API to delete the item by its ID
-      await axios.delete(`http://localhost:8080/api/info/home/${itemId}`);
+      await axios.delete(`/api/info/home/${itemId}`);
       toast.success("Skill deleted successfully");
       // Update the state to reflect the deleted item
       setData((prevData) => prevData.filter((item) => item._id !== itemId));
@@ -51,7 +51,7 @@ const HomeDataTable = ({ update }) => {
               <td>
                 {item.image ? (
                   <img
-                    src={`http://localhost:8080/uploads/${item.image}`}
+                    src={`/uploads/${item.image}`}
                     alt="ImageFile"
                     width="100"
                   />
@@ -62,7 +62,7 @@ const HomeDataTable = ({ update }) => {
               <td>
                 {item.resumefile ? (
                   <a
-                    href={`http://localhost:8080/uploads/${item.resumefile}`}
+                    href={`/uploads/${item.resumefile}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

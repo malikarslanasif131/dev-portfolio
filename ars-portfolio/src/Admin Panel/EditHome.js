@@ -14,7 +14,7 @@
 
 //   useEffect(() => {
 //     // Fetch the item's data to pre-fill the form
-//     axios.get(`http://localhost:8080/api/info/home/${id}`).then((response) => {
+//     axios.get(`/api/info/home/${id}`).then((response) => {
 //       const itemData = response.data.data;
 //       setProName(itemData.proName);
 //       setTech(itemData.tech);
@@ -58,7 +58,7 @@
 //       }
 
 //       const res = await axios.put(
-//         `http://localhost:8080/api/info/home/${id}`,
+//         `/api/info/home/${id}`,
 //         formData
 //       );
 

@@ -25,7 +25,7 @@ const Experience = () => {
   }
   useEffect(() => {
     // Fetch experience data from the server
-    axios.get("http://localhost:8080/api/experience").then((response) => {
+    axios.get("/api/experience").then((response) => {
       setExperienceData(response.data);
     });
   }, []);

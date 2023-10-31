@@ -47,7 +47,7 @@ const AdSetting = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/setting/").then((response) => {
+    axios.get("/api/setting/").then((response) => {
       setData(response.data.data);
     });
   }, [contentFlag]);
@@ -55,7 +55,7 @@ const AdSetting = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/setting", {
+      const response = await axios.post("/api/setting", {
         primaryColor: selectedColor1,
         secondaryColor: selectedColor2,
         tertiaryColor: selectedColor3,
@@ -82,9 +82,7 @@ const AdSetting = () => {
 
   const handleDelete = async (itemId) => {
     try {
-      const response = await axios.delete(
-        `http://localhost:8080/api/setting/${itemId}`
-      );
+      const response = await axios.delete(`/api/setting/${itemId}`);
 
       if (response.data.success === true) {
         // Remove the deleted item from the data state

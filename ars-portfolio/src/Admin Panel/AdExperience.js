@@ -22,16 +22,13 @@ const AdExperience = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/experience",
-        {
-          organization,
-          role,
-          joiningDate,
-          completionDate,
-          details,
-        }
-      );
+      const response = await axios.post("/api/experience", {
+        organization,
+        role,
+        joiningDate,
+        completionDate,
+        details,
+      });
 
       if (response.status === 201) {
         toast.success("Experience entry added successfully");
@@ -56,9 +53,7 @@ const AdExperience = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(
-        `http://localhost:8080/api/experience/${id}`
-      );
+      const response = await axios.delete(`/api/experience/${id}`);
 
       if (response.status === 200) {
         toast.success("Experience entry deleted successfully");

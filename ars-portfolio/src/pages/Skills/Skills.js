@@ -9,7 +9,7 @@ const Skills = () => {
 
   useEffect(() => {
     // Fetch skills from the server
-    axios.get("http://localhost:8080/api/skills").then((response) => {
+    axios.get("/api/skills").then((response) => {
       setSkills(response.data.data);
     });
   }, []);
@@ -37,7 +37,7 @@ const Skills = () => {
                           style={{ width: "16rem" }}
                         >
                           <img
-                            src={`http://localhost:8080/uploads/${skill.image}`}
+                            src={`/uploads/${skill.image}`}
                             className="card-img-top mt-2"
                             alt="..."
                           />

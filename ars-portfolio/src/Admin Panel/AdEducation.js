@@ -14,7 +14,7 @@ const AdEducation = () => {
 
   useEffect(() => {
     // Fetch education data from the server
-    axios.get("http://localhost:8080/api/education").then((response) => {
+    axios.get("/api/education").then((response) => {
       setEducationData(response.data);
     });
   }, []);
@@ -22,7 +22,7 @@ const AdEducation = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/education", {
+      const response = await axios.post("/api/education", {
         degree,
         institute,
         yearStarted,

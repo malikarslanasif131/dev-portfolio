@@ -15,19 +15,16 @@ const AdAbout = () => {
 
   useEffect(() => {
     // Fetch all data for the table
-    axios.get("http://localhost:8080/api/about").then((response) => {
+    axios.get("/api/about").then((response) => {
       setData(response.data.data);
     });
   }, [contentFlag]);
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/about/update",
-        {
-          content,
-        }
-      );
+      const response = await axios.post("/api/about/update", {
+        content,
+      });
 
       if (response.data.success === true) {
         toast.success("About content updated successfully");
@@ -49,9 +46,7 @@ const AdAbout = () => {
 
   const handleDelete = async (itemId) => {
     try {
-      const response = await axios.delete(
-        `http://localhost:8080/api/about/${itemId}`
-      );
+      const response = await axios.delete(`/api/about/${itemId}`);
 
       if (response.data.success === true) {
         // Remove the deleted item from the data state

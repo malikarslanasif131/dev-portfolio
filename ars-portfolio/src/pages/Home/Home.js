@@ -33,7 +33,7 @@ const Home = () => {
   // }
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("http://localhost:8080/api/info/home");
+      const response = await axios.get("/api/info/home");
       if (response.data.data[0]) {
         setData(response.data.data);
         setProName(response.data.data[0].proName);
@@ -45,7 +45,7 @@ const Home = () => {
       }
     };
     getData();
-    // axios.get("http://localhost:8080/api/info/home").then((response) => {
+    // axios.get("/api/info/home").then((response) => {
     //   setData(response.data.data);
     //   setProName(data.proName);
     // });
@@ -76,11 +76,7 @@ const Home = () => {
               <img
                 className="ms-5 mt-5 image_round"
                 // src={logo}
-                src={
-                  image
-                    ? `http://localhost:8080/uploads/${image}`
-                    : "http://localhost:8080/uploads/ars-portfolio.jpg"
-                }
+                src={image ? `/uploads/${image}` : "/uploads/ars-portfolio.jpg"}
                 width={500}
                 height={570}
                 alt="Logo"
@@ -115,11 +111,7 @@ const Home = () => {
                 Hire Me
               </a>
               <a
-                href={
-                  resumefile
-                    ? `http://localhost:8080/uploads/${resumefile}`
-                    : ""
-                }
+                href={resumefile ? `/uploads/${resumefile}` : ""}
                 target="_blank"
                 rel="noopener noreferrer"
                 type="button"
