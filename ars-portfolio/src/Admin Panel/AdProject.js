@@ -11,7 +11,8 @@ const AdProject = () => {
   const [usedTech, setUsedTech] = useState("");
   const [selectedOption, setSelectedOption] = useState(null);
   const [image, setImage] = useState(null);
-  const [video, setVideo] = useState(null);
+  // const [video, setVideo] = useState(null);
+  const [video, setVideo] = useState("");
   const [details, setDetails] = useState("");
   const [projects, setProjects] = useState([]);
   const handleImageChange = (e) => {
@@ -23,15 +24,15 @@ const AdProject = () => {
       file = null;
     }
   };
-  const handleVideoChange = (e) => {
-    var file = e.target.files[0];
-    if (file) {
-      setVideo(file);
-    } else {
-      setVideo(null);
-      file = null;
-    }
-  };
+  // const handleVideoChange = (e) => {
+  //   var file = e.target.files[0];
+  //   if (file) {
+  //     setVideo(file);
+  //   } else {
+  //     setVideo(null);
+  //     file = null;
+  //   }
+  // };
 
   useEffect(() => {
     // Fetch projects from the server
@@ -67,6 +68,7 @@ const AdProject = () => {
         setUsedTech("");
         setDetails("");
         setImage(null);
+        setVideo(null);
         setProjects([...projects, response.data.data]);
       } else {
         toast.error("Failed to add project");
@@ -154,7 +156,7 @@ const AdProject = () => {
                     onChange={handleImageChange}
                   />
                 </div>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <label className="form-label fs-6">Project Video:</label>
                   <input
                     type="file"
@@ -163,6 +165,17 @@ const AdProject = () => {
                     accept="video/*"
                     name="video"
                     onChange={handleVideoChange}
+                  />
+                </div> */}
+                <div className="mb-3">
+                  <label className="form-label fs-6">Project Video:</label>
+                  <input
+                    type="text"
+                    className="form-control fs-6"
+                    // required
+
+                    name="video"
+                    onChange={(e) => setVideo(e.target.value)}
                   />
                 </div>
 

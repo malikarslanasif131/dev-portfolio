@@ -6,12 +6,12 @@ import Project from "../models/projectModel.js";
 export const createProject = async (req, res) => {
   // console.log(req.body);
   try {
-    const { name, stack, usedTech, details } = req.body;
+    const { name, stack, usedTech, details, video } = req.body;
     const image =
       req.files && req.files["image"] ? req.files["image"][0].filename : null;
-    const video =
-      req.files && req.files["video"] ? req.files["video"][0].filename : null;
-    console.log("video" + video);
+    // const video =
+    //   req.files && req.files["video"] ? req.files["video"][0].filename : null;
+    // console.log("video" + video);
 
     const project = new Project({
       name,

@@ -40,100 +40,6 @@ const Project = () => {
             </h1>
           </div>
 
-          {/* <div className="col-md-4 ">
-           
-            <span className="top_badge__style goldenrod_badge">Full Stack </span>
-            <div className="card card__style " style={{ width: "24rem" }}>
-              <img
-                src={require("../../images/blog.png")}
-                className="card-img-top"
-                style={{ height: "220px" }}
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title">BlogBooth</h5>
-                <p>
-                  <span className="badge__style pink_badge">React JS</span>
-                  <span className="badge__style crimson_badge">
-                    Express (Node Js)
-                  </span>
-                  <span className="badge__style teal_badge">MongoDB</span>
-                  <span className="badge__style indigo_badge">Boostrap</span>
-                </p>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div className="d-grid gap-2 col-12 mx-auto">
-                  <button className="btn btn-primary btn_color_pink" type="button">
-                    Button
-                  </button>
-                </div>
-              </div>
-            </div>
-   
-          </div> */}
-          {/* <div className="col-md-4">
-      
-            <span className="top_badge__style teal_badge">MERN Stack</span>
-            <div className="card card__style" style={{ width: "24rem" }}>
-              <img
-                src={require("../../images/ecommerce.jpg")}
-                style={{ height: "220px" }}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title">E-Commerce </h5>
-                <p>
-                  <span className="badge__style blue_badge">React JS</span>
-                  <span className="badge__style teal_badge">MongoDB</span>
-                  <span className="badge__style pink_badge">Express (Node Js)</span>
-                </p>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div className="d-grid gap-2 col-12 mx-auto">
-                  <button className="btn btn-primary btn_color_pink" type="button">
-                    Button
-                  </button>
-                </div>
-              </div>
-            </div>
-   
-          </div> */}
-          {/* <div className="col-md-4 ">
-            <span className="top_badge__style crimson_badge">CRUD MERN</span>
-            <div className="card card__style" style={{ width: "24rem" }}>
-              <img
-                src={require("../../images/portfolio.png")}
-                style={{ height: "220px" }}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title">MERN Todo</h5>
-                <p>
-                  <span className="badge__style indigo_badge">Express Js</span>
-                  <span className="badge__style goldenrod_badge">MongoDB</span>
-                  <span className="badge__style crimson_badge">Tailwind Css</span>
-                  <span className="badge__style blue_badge">React JS</span>
-                </p>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div className="d-grid gap-2 col-12 mx-auto">
-                  <button className="btn btn-primary btn_color_pink" type="button">
-                    Button
-                  </button>
-                </div>
-              </div>
-            </div>
-          
-          </div> */}
-
           {projects &&
             projects.map((project) => {
               // setProjectName(project.name); // Set the project name here or wherever needed
@@ -144,12 +50,12 @@ const Project = () => {
                   </span>
                   <div
                     className="card card__style "
-                    style={{ minWidth: "24rem", maxWidth: "24rem" }}
+                    // style={{ minWidth: "24rem", maxWidth: "24rem" }}
                   >
                     <img
                       src={`/uploads/${project.image}`}
                       className="card-img-top"
-                      style={{ maxHeight: "220px", minHeight: "220px" }}
+                      style={{ minHeight: "220px" }}
                       alt="..."
                     />
                     <div className="card-body">
@@ -169,11 +75,14 @@ const Project = () => {
                         <button
                           className="btn btn-primary btn_color_pink"
                           type="button"
+                          // onClick={() =>
+                          //   handleOpenModal(
+                          //     `/uploads/${project.video}`,
+                          //     project.name
+                          //   )
+                          // }
                           onClick={() =>
-                            handleOpenModal(
-                              `/uploads/${project.video}`,
-                              project.name
-                            )
+                            handleOpenModal(project.video, project.name)
                           }
                         >
                           Watch Video
